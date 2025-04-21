@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Navigator from './navbar/navbar';
+import Galery from './galery/galery';
+import PanelArticles from './listproject/ListProjects';
+import PanelContact from './contact/panelContact';
+import MainContent from './maincontent/maincontent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="container-fluid">
+            <div className="row">
+                <Navigator />
+                <div className="tm-main">
+                    <MainContent/>
+                    <Galery />
+                    <PanelArticles title="Proyectos"/>
+                    <PanelContact Phone="+541136695771" Email="pgnahuel@gmail.com" Facebook="pgnahuel" Instagram="_nacho.png" X="NachoPNG" Youtube="NahuelGomez94"/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
