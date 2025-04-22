@@ -1,12 +1,13 @@
 import React from "react";
 import ProjectItem from "./projectItem";
+import t from "./../resources/translate";
 
 export default function PanelArticles(props) {
     return (
         <div className="tm-section-wrap">
         <div className="tm-parallax" data-parallax="scroll" data-image-src="img/img-03.jpg"></div>
         <div id="about" className="tm-section">
-            <h2 className="tm-text-primary">About Upright CSS Template</h2>
+            <h2 className="tm-text-primary">{t("TITLE_PROJECTS")}</h2>
             <hr className="mb-5"/>
             
             <div className="row tm-row-about">

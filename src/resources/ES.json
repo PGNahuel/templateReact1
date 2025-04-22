@@ -1,5 +1,10 @@
 {
-    "MAIN_CONTENT":"Contenido Principal",
+    "MAIN_CONTENT":"Inicio",
+    "GALERY":"Galería",
+    "ABOUT_ME":"Acerca de Mí",
+    "CONTACT":"Contact",
     "PHONE":"Teléfono",
-    "EMAIL":"E-Mail"
+    "EMAIL":"E-Mail",
+    "TITLE_PROJECTS":"Proyectos",
+    "VIEW_MORE":"Ver más"
 }
