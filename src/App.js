@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navigator from './navbar/navbar';
 import Galery from './galery/galery';
@@ -14,7 +13,7 @@ function App() {
                 <div className="tm-main">
                     <MainContent/>
                     <Galery />
-                    <PanelArticles title="Proyectos"/>
+                    <PanelArticles/>
                     <PanelContact Phone="+541136695771" Email="pgnahuel@gmail.com" Facebook="pgnahuel" Instagram="_nacho.png" X="NachoPNG" Youtube="NahuelGomez94"/>
                 </div>
             </div>

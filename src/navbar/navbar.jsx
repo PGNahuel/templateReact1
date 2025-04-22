@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarItem from "./items";
+import t from "./../resources/translate"
 
 export default function Navigator() {
     return (
@@ -13,10 +14,10 @@ export default function Navigator() {
                         <h1 className="tm-brand">PG Nahuel</h1>
                     </div>
                     <ul id="tm-main-nav">
-                        <NavBarItem description="Inicio" icon="fa-home" href="#home" />
-                        <NavBarItem description="Galeria" icon="fa-images" href="#gallery" />
-                        <NavBarItem description="Acerca de mi" icon="fa-user-friends" href="#about" />
-                        <NavBarItem description="Contacto" icon="fa-envelope" href="#contact" />
+                        <NavBarItem description={t("MAIN_CONTENT")} icon="fa-home" href="#home" />
+                        <NavBarItem description={t("GALERY")} icon="fa-images" href="#gallery" />
+                        <NavBarItem description={t("TITLE_PROJECTS")} icon="fa-user-friends" href="#about" />
+                        <NavBarItem description={t("CONTACT")} icon="fa-envelope" href="#contact" />
                     </ul>
 
                 </div>
