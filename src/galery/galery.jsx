@@ -36,7 +36,7 @@ const Figure = (props) => {
 const Galery = () => {
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/img-02.jpg"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/programando.png"></div>
             <section id="gallery" className="tm-section">
                 <h2 className="tm-text-primary">{t("GALERY")}</h2>
                 <hr className="mb-5"></hr>
@@ -49,7 +49,7 @@ const Galery = () => {
                 </ul>
 
                 <div className="tm-gallery">
-                <Figure Src="img/gallery/portrait-01.jpg" Tumbnails="img/gallery/tn/portrait-01.jpg" Alt="Image" Title="Dreamy Honey iasdodisjaiosd saoisdajoisda dsaoin" Tag="portrait" />
+                    <Figure Src="img/gallery/portrait-01.jpg" Tumbnails="img/gallery/tn/portrait-01.jpg" Alt="Image" Title="Dreamy Honey iasdodisjaiosd saoisdajoisda dsaoin" Tag="portrait" />
                     <Figure Src="img/gallery/building-01.jpg" Tumbnails="img/gallery/tn/building-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
                     <Figure Src="img/gallery/nature-01.jpg" Tumbnails="img/gallery/tn/nature-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
                     <Figure Src="img/gallery/animal-01.jpg" Tumbnails="img/gallery/tn/animal-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
