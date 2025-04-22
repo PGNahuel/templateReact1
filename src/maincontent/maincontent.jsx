@@ -4,7 +4,7 @@ import t from "./../resources/translate";
 export default function MainContent() {
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/inews.png"></div>
             <div id="home" className="tm-section">
                 <h2 className="tm-text-primary">{t("MAIN_CONTENT")}</h2>
                 <hr className="mb-5"></hr>

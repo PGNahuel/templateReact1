@@ -1,10 +1,10 @@
 import React from "react";
 import ProjectItem from "./projectItem";
 
-export default function PanelArticles(props) {
+export default function PanelArticles() {
     return (
         <div className="tm-section-wrap">
-        <div className="tm-parallax" data-parallax="scroll" data-image-src="img/img-03.jpg"></div>
+        <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.png"></div>
         <div id="about" className="tm-section">
             <h2 className="tm-text-primary">About Upright CSS Template</h2>
             <hr className="mb-5"/>

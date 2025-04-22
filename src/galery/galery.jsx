@@ -3,7 +3,7 @@ import React from "react";
 export default function Galery(){
     return (
         <div className="tm-section-wrap">
-                    <div className="tm-parallax" data-parallax="scroll" data-image-src="img/img-02.jpg"></div>
+                    <div className="tm-parallax" data-parallax="scroll" data-image-src="img/programando.png"></div>
         <section id="gallery" className="tm-section">
         <h2 className="tm-text-primary">Upright Gallery</h2>
         <hr className="mb-5"></hr>
