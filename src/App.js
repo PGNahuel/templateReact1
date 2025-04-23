@@ -14,7 +14,14 @@ function App() {
                     <MainContent/>
                     <Galery />
                     <PanelArticles/>
-                    <PanelContact Phone="+541136695771" Email="pgnahuel@gmail.com" Facebook="pgnahuel" Instagram="_nacho.png" X="NachoPNG" Youtube="NahuelGomez94"/>
+                    <PanelContact 
+                    Phone="541136695771" 
+                    Email="pgnahuel@gmail.com" 
+                    Instagram="_nacho.png" 
+                    X="NachoPNG" 
+                    Youtube="NahuelGomez94" 
+                    Linkedin="nahuel-g%C3%B3mez-a869617b"
+                    Podcast="Podcast"/>
                 </div>
             </div>
         </div>

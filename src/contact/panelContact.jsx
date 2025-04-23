@@ -5,7 +5,7 @@ import t from "./../resources/translate"
 export default function PanelContact(props) {
     const mapJoseMarmol = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13107.053242930078!2d-58.38071122631427!3d-34.786733393364905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd346291b7ef7%3A0x44b74d34162ac098!2sB1845%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1745258660104!5m2!1ses-419!2sar";
 
-    const title = props.title ? props.title : "Contacto";
+    const title = props.title ? props.title : t("CONTACT");
 
     return (
         <div className="tm-section-wrap">
@@ -32,9 +32,9 @@ export default function PanelContact(props) {
 
                         <ul className="tm-contact-links mb-4">
                             <li className="mb-2">
-                                <a href="tel:0100200340">
+                                <a href={"https://api.whatsapp.com/send?phone="+props.Phone} target="_blank">
                                     <i className="fas fa-phone mr-2 tm-contact-link-icon"></i>
-                                    {t("PHONE")}: {props.Phone}
+                                    {t("PHONE")}: +{props.Phone}
                                 </a>
                             </li>
                             <li>
@@ -49,6 +49,8 @@ export default function PanelContact(props) {
                             {props.X ? <li><a target="_blank" href={"https://x.com/" + props.X} className="tm-social-link"><i className="fab fa-twitter"></i></a></li> : ""}
                             {props.Instagram ? <li><a target="_blank" href={"https://instagram.com/" + props.Instagram} className="tm-social-link"><i className="fab fa-instagram"></i></a></li> : ""}
                             {props.Youtube ? <li><a target="_blank" href={"https://youtube.com/" + props.Youtube} className="tm-social-link"><i className="fab fa-youtube"></i></a></li> : ""}
+                            {props.Linkedin ? <li><a target="_blank" href={"https://www.linkedin.com/in/" + props.Linkedin} className="tm-social-link"><i className="fab fa-linkedin"></i></a></li> : ""}
+                            {props.Podcast ? <li><a target="_blank" href={"https://www.linkedin.com/in/" + props.Podcast} className="tm-social-link"><i className="fa fa-podcast"></i></a></li> : ""}
                         </ul>
                     </div>
                 </div>
