@@ -50,7 +50,7 @@ export default function PanelContact(props) {
                             {props.Instagram ? <li><a target="_blank" href={"https://instagram.com/" + props.Instagram} className="tm-social-link"><i className="fab fa-instagram"></i></a></li> : ""}
                             {props.Youtube ? <li><a target="_blank" href={"https://youtube.com/" + props.Youtube} className="tm-social-link"><i className="fab fa-youtube"></i></a></li> : ""}
                             {props.Linkedin ? <li><a target="_blank" href={"https://www.linkedin.com/in/" + props.Linkedin} className="tm-social-link"><i className="fab fa-linkedin"></i></a></li> : ""}
-                            {props.Podcast ? <li><a target="_blank" href={"https://www.linkedin.com/in/" + props.Podcast} className="tm-social-link"><i className="fa fa-podcast"></i></a></li> : ""}
+                            {props.Podcast ? <li><a target="_blank" href={"https://www.ivoox.com/" + props.Podcast} className="tm-social-link"><i className="fa fa-podcast"></i></a></li> : ""}
                         </ul>
                     </div>
                 </div>

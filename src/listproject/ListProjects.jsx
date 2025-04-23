@@ -1,6 +1,28 @@
 import React from "react";
 import t from "./../resources/translate"
 
+function importAllMarkdown() {
+    const files = FileReader();
+    
+  
+    const promises = Object.entries(files).map(async ([path, resolver]) => {
+      const content = await resolver();
+      const title = path.split('/').pop().replace('.md', '');
+      return { title, content };
+    });
+  
+    return Promise.all(promises);
+  }
+
+const GetArticles = ()=>{
+    console.log(importAllMarkdown())
+    return [
+        {Title:"Ejemplo", Content:"Contenido de ejemplo :D"},
+        {Title:"Ejemplo", Content:"Contenido de ejemplo :D"},
+        {Title:"Ejemplo", Content:"Contenido de ejemplo :D"},
+        {Title:"Ejemplo", Content:"Contenido de ejemplo :D"}
+    ]
+}
 
 const Article = (props) => {
     let author = props.Author ? props.Author : t("UNKNOW")
@@ -31,11 +53,9 @@ const PanelArticles = () => {
             <hr className="mb-5"></hr>
 
             <div class="news-container">
-            <Article Title="Ejemplo" Content="Contenido de prueba :D" />
-            <Article Title="Ejemplo" Content="Contenido de prueba :D" />
-            <Article Title="Ejemplo" Content="Contenido de prueba :D" />
-            <Article Title="Ejemplo" Content="Contenido de prueba :D" />
-            <Article Title="Ejemplo" Content="Contenido de prueba :D" />
+                {GetArticles().map(a => {
+                    return <Article Title={a.Title} Content={a.Content} />
+                })}
             </div>
 
         </div>

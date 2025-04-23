@@ -21,7 +21,7 @@ function App() {
                     X="NachoPNG" 
                     Youtube="NahuelGomez94" 
                     Linkedin="nahuel-g%C3%B3mez-a869617b"
-                    Podcast="Podcast"/>
+                    Podcast="escuchar-audios-nahuel-gomez_al_15792872_1.html"/>
                 </div>
             </div>
         </div>
