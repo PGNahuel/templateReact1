@@ -12,8 +12,8 @@ function App() {
                 <Navigator />
                 <div className="tm-main">
                     <MainContent/>
-                    <Galery />
                     <PanelArticles/>
+                    <Galery/>
                     <PanelContact 
                     Phone="541136695771" 
                     Email="pgnahuel@gmail.com" 

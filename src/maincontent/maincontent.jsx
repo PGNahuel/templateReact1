@@ -5,21 +5,21 @@ import ResumeMainItem from "./resumeItemContent";
 export default function MainContent() {
     let articles = [
         {
-            title: "Titulo uno"
-            , date: "21 de abril del 2025"
-            , resume: "loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa "
-            , icon: "fa-scroll"
-        },
-        {
-            title: "Este es otro titulo"
-            , date: "21 de abril del 2025"
-            , resume: "loren ipsum opaopaloren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa "
+            title: "Crecé"
+            , date: "23 de abril del 2025"
+            , resume: "Acá voy a dar lo mejor de mi, documentarlo y subirlo de manera que puedas crecer profesionalmente. Si queres hablar conmigo, abajo tenes todos mis canales de contacto."
             , icon: "fa-dove"
         },
         {
-            title: "Opa con los titulos"
-            , date: "21 de abril del 2025"
-            , resume: "loren ipsum opaopaloren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa loren ipsum opaopa "
+            title: "Mi objetivo"
+            , date: "23 de abril del 2025"
+            , resume: "Con esta página busco centralizar el conocimiento que tengo y poder compartirlo con aquellos que les interese, además de tener un lugar donde mostrar lo que hago y cómo lo hago."
+            , icon: "fa-scroll"
+        },
+        {
+            title: "Como va pintando la cosa"
+            , date: "23 de abril del 2025"
+            , resume: "La verdad que como backender pareciera que no avanzo, por la verdad es que sí. Hay muchas cosas por hacer, muchas que diseñar, muchas que mostrar. Es un clima soleado, ventoso y en un terreno nuevo."
             , icon: "fa-cloud-sun"
         }
     ];

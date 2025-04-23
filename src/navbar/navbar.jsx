@@ -15,8 +15,8 @@ export default function Navigator() {
                     </div>
                     <ul id="tm-main-nav">
                         <NavBarItem description={t("MAIN_CONTENT")} icon="fa-home" href="#home" />
+                        <NavBarItem description={t("ARTICLES")} icon="fa-user-friends" href="#articles" />
                         <NavBarItem description={t("GALERY")} icon="fa-images" href="#gallery" />
-                        <NavBarItem description={t("TITLE_PROJECTS")} icon="fa-user-friends" href="#about" />
                         <NavBarItem description={t("CONTACT")} icon="fa-envelope" href="#contact" />
                     </ul>
 
