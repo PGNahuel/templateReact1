@@ -34,6 +34,45 @@ const Figure = (props) => {
 }
 
 const Galery = () => {
+    const items = [
+        { "Src": "img/gallery/portrait-01.jpg", "Tumbnails": "img/gallery/tn/portrait-01.jpg", "Alt": "Image", "Title": "Dreamy Honey iasdodisjaiosd saoisdajoisda dsaoin", "Tag": "portrait" },
+        { "Src": "img/gallery/building-01.jpg", "Tumbnails": "img/gallery/tn/building-01.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/nature-01.jpg", "Tumbnails": "img/gallery/tn/nature-01.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/animal-01.jpg", "Tumbnails": "img/gallery/tn/animal-01.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-02.jpg", "Tumbnails": "img/gallery/tn/building-02.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/nature-02.jpg", "Tumbnails": "img/gallery/tn/nature-02.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/portrait-02.jpg", "Tumbnails": "img/gallery/tn/portrait-02.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/animal-02.jpg", "Tumbnails": "img/gallery/tn/animal-02.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-03.jpg", "Tumbnails": "img/gallery/tn/building-03.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/portrait-03.jpg", "Tumbnails": "img/gallery/tn/portrait-03.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/animal-03.jpg", "Tumbnails": "img/gallery/tn/animal-03.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/nature-03.jpg", "Tumbnails": "img/gallery/tn/nature-03.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/animal-04.jpg", "Tumbnails": "img/gallery/tn/animal-04.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-04.jpg", "Tumbnails": "img/gallery/tn/building-04.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/nature-04.jpg", "Tumbnails": "img/gallery/tn/nature-04.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/portrait-04.jpg", "Tumbnails": "img/gallery/tn/portrait-04.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/animal-05.jpg", "Tumbnails": "img/gallery/tn/animal-05.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-05.jpg", "Tumbnails": "img/gallery/tn/building-05.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/portrait-05.jpg", "Tumbnails": "img/gallery/tn/portrait-05.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/nature-05.jpg", "Tumbnails": "img/gallery/tn/nature-05.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/nature-06.jpg", "Tumbnails": "img/gallery/tn/nature-06.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/animal-06.jpg", "Tumbnails": "img/gallery/tn/animal-06.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-06.jpg", "Tumbnails": "img/gallery/tn/building-06.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/portrait-06.jpg", "Tumbnails": "img/gallery/tn/portrait-06.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/nature-07.jpg", "Tumbnails": "img/gallery/tn/nature-07.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/portrait-07.jpg", "Tumbnails": "img/gallery/tn/portrait-07.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/animal-07.jpg", "Tumbnails": "img/gallery/tn/animal-07.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-07.jpg", "Tumbnails": "img/gallery/tn/building-07.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/portrait-08.jpg", "Tumbnails": "img/gallery/tn/portrait-08.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/building-08.jpg", "Tumbnails": "img/gallery/tn/building-08.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/nature-08.jpg", "Tumbnails": "img/gallery/tn/nature-08.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/animal-08.jpg", "Tumbnails": "img/gallery/tn/animal-08.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" },
+        { "Src": "img/gallery/building-09.jpg", "Tumbnails": "img/gallery/tn/building-09.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "building" },
+        { "Src": "img/gallery/nature-09.jpg", "Tumbnails": "img/gallery/tn/nature-09.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "nature" },
+        { "Src": "img/gallery/portrait-09.jpg", "Tumbnails": "img/gallery/tn/portrait-09.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "portrait" },
+        { "Src": "img/gallery/animal-09.jpg", "Tumbnails": "img/gallery/tn/animal-09.jpg", "Alt": "Image", "Title": "Dreamy Honey", "Tag": "animal" }
+    ];
+
     return (
         <div className="tm-section-wrap">
             <div className="tm-parallax" data-parallax="scroll" data-image-src="img/programando.png"></div>
@@ -49,42 +88,11 @@ const Galery = () => {
                 </ul>
 
                 <div className="tm-gallery">
-                    <Figure Src="img/gallery/portrait-01.jpg" Tumbnails="img/gallery/tn/portrait-01.jpg" Alt="Image" Title="Dreamy Honey iasdodisjaiosd saoisdajoisda dsaoin" Tag="portrait" />
-                    <Figure Src="img/gallery/building-01.jpg" Tumbnails="img/gallery/tn/building-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/nature-01.jpg" Tumbnails="img/gallery/tn/nature-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/animal-01.jpg" Tumbnails="img/gallery/tn/animal-01.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-02.jpg" Tumbnails="img/gallery/tn/building-02.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/nature-02.jpg" Tumbnails="img/gallery/tn/nature-02.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/portrait-02.jpg" Tumbnails="img/gallery/tn/portrait-02.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/animal-02.jpg" Tumbnails="img/gallery/tn/animal-02.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-03.jpg" Tumbnails="img/gallery/tn/building-03.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/portrait-03.jpg" Tumbnails="img/gallery/tn/portrait-03.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/animal-03.jpg" Tumbnails="img/gallery/tn/animal-03.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/nature-03.jpg" Tumbnails="img/gallery/tn/nature-03.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/animal-04.jpg" Tumbnails="img/gallery/tn/animal-04.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-04.jpg" Tumbnails="img/gallery/tn/building-04.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/nature-04.jpg" Tumbnails="img/gallery/tn/nature-04.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/portrait-04.jpg" Tumbnails="img/gallery/tn/portrait-04.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/animal-05.jpg" Tumbnails="img/gallery/tn/animal-05.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-05.jpg" Tumbnails="img/gallery/tn/building-05.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/portrait-05.jpg" Tumbnails="img/gallery/tn/portrait-05.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/nature-05.jpg" Tumbnails="img/gallery/tn/nature-05.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/nature-06.jpg" Tumbnails="img/gallery/tn/nature-06.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/animal-06.jpg" Tumbnails="img/gallery/tn/animal-06.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-06.jpg" Tumbnails="img/gallery/tn/building-06.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/portrait-06.jpg" Tumbnails="img/gallery/tn/portrait-06.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/nature-07.jpg" Tumbnails="img/gallery/tn/nature-07.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/portrait-07.jpg" Tumbnails="img/gallery/tn/portrait-07.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/animal-07.jpg" Tumbnails="img/gallery/tn/animal-07.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-07.jpg" Tumbnails="img/gallery/tn/building-07.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/portrait-08.jpg" Tumbnails="img/gallery/tn/portrait-08.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/building-08.jpg" Tumbnails="img/gallery/tn/building-08.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/nature-08.jpg" Tumbnails="img/gallery/tn/nature-08.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/animal-08.jpg" Tumbnails="img/gallery/tn/animal-08.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
-                    <Figure Src="img/gallery/building-09.jpg" Tumbnails="img/gallery/tn/building-09.jpg" Alt="Image" Title="Dreamy Honey" Tag="building" />
-                    <Figure Src="img/gallery/nature-09.jpg" Tumbnails="img/gallery/tn/nature-09.jpg" Alt="Image" Title="Dreamy Honey" Tag="nature" />
-                    <Figure Src="img/gallery/portrait-09.jpg" Tumbnails="img/gallery/tn/portrait-09.jpg" Alt="Image" Title="Dreamy Honey" Tag="portrait" />
-                    <Figure Src="img/gallery/animal-09.jpg" Tumbnails="img/gallery/tn/animal-09.jpg" Alt="Image" Title="Dreamy Honey" Tag="animal" />
+                    {
+                        items.map((f) => {
+                            return <Figure Src={f.Src} Tumbnails={f.Tumbnails} Alt={f.Alt} Title={f.Title} Tag={f.Tag} />
+                        })
+                    }
                 </div>
             </section>
 
