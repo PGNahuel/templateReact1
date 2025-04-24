@@ -13,7 +13,6 @@ function App() {
                 <div className="tm-main">
                     <MainContent/>
                     <PanelArticles/>
-                    <Galery/>
                     <PanelContact 
                     Phone="541136695771" 
                     Email="pgnahuel@gmail.com" 

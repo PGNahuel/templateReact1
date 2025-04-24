@@ -109,7 +109,7 @@ Existen muchísimas herramientas que nos permiten tener código bien documentado
 
 Un claro ejemplo de esto es [swagger](https://swagger.io/). La cual nos permite tener los endpoints de nuestras aplicaciones documentados y compartir esta documentación permite a otros equipos (incluso a nosotros mismos) saber qué cosas pueden hacer nuestras aplicaciones.
 
-![Ejemplo sagger](/resources/swagger.png)
+![Ejemplo swagger](/resources/swagger.png)
 
 También tenemos los ya mencionado tooltips de las funciones, que nos muestran qué hace cada función, sus parámetros y sus respuestas:
 

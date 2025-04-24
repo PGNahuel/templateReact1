@@ -16,10 +16,15 @@ export default function Navigator() {
                     <ul id="tm-main-nav">
                         <NavBarItem description={t("MAIN_CONTENT")} icon="fa-home" href="#home" />
                         <NavBarItem description={t("ARTICLES")} icon="fa-user-friends" href="#articles" />
-                        <NavBarItem description={t("GALERY")} icon="fa-images" href="#gallery" />
+                        
                         <NavBarItem description={t("CONTACT")} icon="fa-envelope" href="#contact" />
                     </ul>
 
+                    <hr/>
+
+                    <center>
+                        <ul class="tm-contact-social"><li><a target="_blank" href="https://x.com/NachoPNG" class="tm-social-link"><i class="fab fa-twitter"></i></a></li><li><a target="_blank" href="https://instagram.com/_nacho.png" class="tm-social-link"><i class="fab fa-instagram"></i></a></li><li><a target="_blank" href="https://youtube.com/NahuelGomez94" class="tm-social-link"><i class="fab fa-youtube"></i></a></li><li><a target="_blank" href="https://www.linkedin.com/in/nahuel-g%C3%B3mez-a869617b" class="tm-social-link"><i class="fab fa-linkedin"></i></a></li><li><a target="_blank" href="https://www.ivoox.com/escuchar-audios-nahuel-gomez_al_15792872_1.html" class="tm-social-link"><i class="fa fa-podcast"></i></a></li></ul>
+                        </center>
                 </div>
             </nav>
         </div>

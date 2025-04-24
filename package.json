@@ -10,6 +10,7 @@
     "jquery": "^3.7.1",
     "magnific-popup": "^1.2.0",
     "marked": "^15.0.10",
+    "mermaid": "^11.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",

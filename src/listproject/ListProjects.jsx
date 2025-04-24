@@ -6,17 +6,17 @@ import { marked } from "marked";
 
 export async function fetchAndParseMarkdown(filePath) {
     try {
-      const res = await fetch(filePath);
-      if (!res.ok) throw new Error(`Error loading file: ${filePath}`);
-      const markdown = await res.text();
-      const html = marked.parse(markdown); // convierte a HTML
-      return html;
+        const res = await fetch(filePath);
+        if (!res.ok) throw new Error(`Error loading file: ${filePath}`);
+        const markdown = await res.text();
+        const html = marked.parse(markdown); // convierte a HTML
+        return html;
     } catch (err) {
-      console.error("Error fetching markdown:", err);
-      return "<p>Error loading content</p>";
+        console.error("Error fetching markdown:", err);
+        return "<p>Error loading content</p>";
     }
-  }
-  
+}
+
 async function importAllMarkdown() {
     const res = await fetch('./articules/index.json');
     const filenames = await res.json();
@@ -24,13 +24,13 @@ async function importAllMarkdown() {
     const articles = await Promise.all(filenames.map(async f => {
         const html = await fetchAndParseMarkdown(`./articules/${f.file}`);
         return {
-          title: f.title,
-          author: f.author,
-          content: html
+            title: f.title,
+            author: f.author,
+            content: html
         };
-      }));
+    }));
 
-      return articles;
+    return articles;
 }
 
 const Article = (props) => {
@@ -43,13 +43,13 @@ const Article = (props) => {
     const blob = new Blob([contenido], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
 
-    useEffect(()=>{
+    useEffect(() => {
         $('.simple-ajax-popup-align-top').magnificPopup({
             type: 'ajax',
             alignTop: true,
-            overflowY: 'scroll' 
+            overflowY: 'scroll'
         });
-    },[]);
+    }, []);
 
     return (
         <div className="news-card">
@@ -83,8 +83,10 @@ const PanelArticles = () => {
     }, []);
 
     return (
+        
         <div className="tm-section-wrap">
             <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.png"></div>
+            <div className="tm-section">
             <h2 className="tm-text-primary" id="articles">{t("ARTICLES")}</h2>
             <hr className="mb-5"></hr>
 
@@ -93,7 +95,7 @@ const PanelArticles = () => {
                     <Article key={index} Title={a.Title} Content={a.Content} Author={a.Author} />
                 ))}
             </div>
-
+            </div>
         </div>
     )
 }

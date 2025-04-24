@@ -18,12 +18,15 @@ https://templatemo.com/tm-555-upright
 */
 
 .popUpMagnific{
-	max-width:600px; margin: 20px auto; background: #fff;
+    margin: 20px auto;
+    background: #fff;
     padding: 20px 30px;
     text-align: left;
-    max-width: 650px;
-    margin: 40px auto;
-    position: relative;
+}
+
+pre{
+	background-color:#c4eaff;
+	padding:10px;
 }
 
 .news-container {
@@ -76,6 +79,17 @@ https://templatemo.com/tm-555-upright
   .author-name {
 	font-weight: bold;
 	color: #000;
+  }
+
+  @media (max-width: 600px) {
+	.news-container {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.news-card {
+	  max-width: 90%;
+	}
   }
 
 html, body { overflow-x: hidden; }
@@ -193,9 +207,17 @@ hr { border-top: 4px solid #CCC; }
     background: #006699;
     color: white;
     display: flex;
-    align-items: center;
+    align-items: end;
 	justify-content: center;
 	margin-bottom: 100px;
+	background-image: url("./../img/logo.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+.tm-brand-box h1{
+	text-shadow: 4px 4px 6px #007bff;
 }
 
 #tm-main-nav {
@@ -247,8 +269,6 @@ hr { border-top: 4px solid #CCC; }
 	margin-right: 20px;
 }
 
-/* Home section */
-.tm-col-home-l { width: calc(100% - 300px); }
 
 .tm-img-home-container {
 	width: 250px;
@@ -260,7 +280,6 @@ hr { border-top: 4px solid #CCC; }
 }
 
 @media (max-width: 1600px) {
-	.tm-col-home-l { width: calc(100% - 250px); }
 
 	.tm-img-home-container {
 		width: 200px;
