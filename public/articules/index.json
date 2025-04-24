@@ -1,0 +1,6 @@
+[
+    {"title":"Mi experiencia profesional", "file":"exp.md", "author":"Nahuel Gómez"},
+    {"title":"Codigo limpio", "file":"neat_coding.md", "author":"Nahuel Gómez"},
+    {"title":"Pensar abstracto", "file":"think_abstract.md", "author":"Nahuel Gómez"},
+    {"title":"Mi libro", "file":"mybook.md", "author":"Nahuel Gómez"}
+]
