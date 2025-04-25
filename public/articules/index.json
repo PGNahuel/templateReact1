@@ -1,6 +1,6 @@
 [
-    {"title":"Mi experiencia profesional", "file":"exp.md", "author":"Nahuel Gómez"},
-    {"title":"Codificación prolija y documentación", "file":"neat_coding.md", "author":"Nahuel Gómez"},
-    {"title":"Pensar en abstracciones: una forma más sana de programar", "file":"think_abstract.md", "author":"Nahuel Gómez"},
-    {"title":"Mi libro: Código del alma", "file":"mybook.md", "author":"Nahuel Gómez"}
+    {"title":"Mi experiencia profesional", "file":"exp.md", "author":"Nahuel Gómez", "img":"codeando.webp"},
+    {"title":"Codificación prolija y documentación", "file":"neat_coding.md", "author":"Nahuel Gómez", "img":"relatando.webp"},
+    {"title":"Pensar en abstracciones: una forma más sana de programar", "file":"think_abstract.md", "author":"Nahuel Gómez", "img":"podcaster.webp"},
+    {"title":"Mi libro: Código del alma", "file":"mybook.md", "author":"Nahuel Gómez", "img":"news.webp"}
 ]

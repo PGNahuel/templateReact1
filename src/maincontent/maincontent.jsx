@@ -7,7 +7,7 @@ export default function MainContent() {
         {
             title: "Crecé"
             , date: "23 de abril del 2025"
-            , resume: "Acá voy a dar lo mejor de mi, documentarlo y subirlo de manera que puedas crecer profesionalmente. Si queres hablar conmigo, abajo tenes todos mis canales de contacto."
+            , resume: "Acá voy a dar lo mejor de mí, documentarlo y subirlo de manera que puedas crecer profesionalmente. Si queres hablar conmigo, abajo tenes todos mis canales de contacto."
             , icon: "fa-dove"
         },
         {
@@ -26,7 +26,7 @@ export default function MainContent() {
 
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/inews.png"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/inews.webp"></div>
             <div id="home" className="tm-section">
                 <h2 className="tm-text-primary">{t("MAIN_CONTENT")}</h2>
                 <hr className="mb-5"></hr>

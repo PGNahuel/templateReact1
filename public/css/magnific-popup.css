@@ -108,7 +108,7 @@
   button.mfp-arrow {
     overflow: visible;
     cursor: pointer;
-    background: transparent;
+    background-color:white;
     border: 0;
     -webkit-appearance: none;
     display: block;
@@ -116,7 +116,9 @@
     padding: 0;
     z-index: 1046;
     box-shadow: none;
-    touch-action: manipulation; }
+    touch-action: manipulation; 
+    border-radius: 100px;
+  }
   
   button::-moz-focus-inner {
     padding: 0;
@@ -136,15 +138,18 @@
     color: #FFF;
     font-style: normal;
     font-size: 28px;
-    font-family: Arial, Baskerville, monospace; }
+    font-family: Arial, Baskerville, monospace; 
+    background-color:white;
+  }
     .mfp-close:hover,
     .mfp-close:focus {
-      opacity: 1; }
+      opacity: 1; background-color:#00000030}
     .mfp-close:active {
       top: 1px; }
   
   .mfp-close-btn-in .mfp-close {
-    color: #333; }
+    color: #333; 
+  }
   
   .mfp-image-holder .mfp-close,
   .mfp-iframe-holder .mfp-close {

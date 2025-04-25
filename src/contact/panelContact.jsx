@@ -9,7 +9,7 @@ export default function PanelContact(props) {
 
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/contacto.png"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/contacto.webp"></div>
             <div id="contact" className="tm-section">
                 <h2 className="tm-text-primary">{title}</h2>
                 <hr className="mb-5" />

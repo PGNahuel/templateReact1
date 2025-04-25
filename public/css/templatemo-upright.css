@@ -21,7 +21,13 @@ https://templatemo.com/tm-555-upright
     margin: 20px auto;
     background: #fff;
     padding: 20px 30px;
-    text-align: left;
+    text-align: justify;
+	max-width: 75%;
+	position:relative;
+}
+
+.popUpMagnific img{
+	max-width: 100%;
 }
 
 pre{
@@ -88,7 +94,7 @@ pre{
 	}
   
 	.news-card {
-	  max-width: 90%;
+		width: 260px;
 	}
   }
 
@@ -210,7 +216,7 @@ hr { border-top: 4px solid #CCC; }
     align-items: end;
 	justify-content: center;
 	margin-bottom: 100px;
-	background-image: url("./../img/logo.png");
+	background-image: url("./../img/logo.webp");
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -565,10 +571,45 @@ figure.effect-honey:hover ul li a {
 }
 
 .fab { transition: all 0.3s ease; }
-.tm-social-link:hover .fa-instagram { color: #8134AF; }
-.tm-social-link:hover .fa-facebook { color: #3b5998; }
-.tm-social-link:hover .fa-twitter { color:  #00acee; }
-.tm-social-link:hover .fa-youtube { color: #c4302b; }
+.tm-social-link:hover{
+
+}
+.tm-social-link:hover .fa-instagram { 
+	background-color:#8134AF;
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
+.tm-social-link:hover .fa-facebook { 
+	background-color: #3b5998; 
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
+.tm-social-link:hover .fa-linkedin { 
+	background-color: #3b5998; 
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
+.tm-social-link:hover .fa-twitter { 
+	background-color:#00acee; 
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
+.tm-social-link:hover .fa-youtube { 
+	background-color: #c4302b; 
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
+.tm-social-link:hover .fa-podcast { 
+	background-color: #ff8310; 
+	color: #fafafa; 
+	padding:5px;
+	border-radius: 10px;
+}
 
 .slick-dots {
 	position: static;

@@ -75,7 +75,7 @@ const Galery = () => {
 
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/programando.png"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/programando.webp"></div>
             <section id="gallery" className="tm-section">
                 <h2 className="tm-text-primary">{t("GALERY")}</h2>
                 <hr className="mb-5"></hr>

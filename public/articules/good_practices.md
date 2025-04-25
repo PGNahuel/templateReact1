@@ -6,7 +6,7 @@
 >
 > *Los ejemplos de código los voy a hacer en lenguaje Golang o Javascript*
 
-A continuación te dejaré una lista de los articulos que fui escribiendo:
+A continuación te dejaré una lista de los artículos que fui escribiendo:
 
 - [Pensar en abstracciones](/think_abstract.md)
 - [Codificación prolija y documentación](/neat_coding.md)

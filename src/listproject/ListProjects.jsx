@@ -26,7 +26,8 @@ async function importAllMarkdown() {
         return {
             title: f.title,
             author: f.author,
-            content: html
+            content: html,
+            img: f.img
         };
     }));
 
@@ -42,6 +43,7 @@ const Article = (props) => {
 
     const blob = new Blob([contenido], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
+    const img = props.Img ? props.Img : "articule.webp";
 
     useEffect(() => {
         $('.simple-ajax-popup-align-top').magnificPopup({
@@ -54,7 +56,7 @@ const Article = (props) => {
     return (
         <div className="news-card">
             <a className="simple-ajax-popup-align-top" href={url}>
-                <img src="img/articule.png" className="news-image" />
+                <img src={"img/"+img} className="news-image" />
             </a>
             <div className="news-content">
                 <div className="news-title">
@@ -75,6 +77,7 @@ const PanelArticles = () => {
                 Title: info.title,
                 Content: info.content,
                 Author: info.author,
+                Img: info.img
             }));
             setArticles(mapped);
         }).catch(err => {
@@ -85,14 +88,14 @@ const PanelArticles = () => {
     return (
         
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.png"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.webp"></div>
             <div className="tm-section">
             <h2 className="tm-text-primary" id="articles">{t("ARTICLES")}</h2>
             <hr className="mb-5"></hr>
 
             <div className="news-container">
                 {articles.map((a, index) => (
-                    <Article key={index} Title={a.Title} Content={a.Content} Author={a.Author} />
+                    <Article key={index} Title={a.Title} Content={a.Content} Author={a.Author} Img={a.Img} />
                 ))}
             </div>
             </div>
