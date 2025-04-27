@@ -167,16 +167,6 @@ $(document).ready(function () {
         goToPage(1);
     });
 
-    /****************** Magnific Popup ******************/
-
-    $('.tm-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-      });
-
     /**************** Smooth Scrolling *****************/
 
     $(".tm-btn-next").on('click', function(event) {

@@ -22,7 +22,7 @@ export default function PanelContact(props) {
                             <div className="gmap_canvas">
                                     <iframe src={mapJoseMarmol}
                                       width="100%" height="520" id="gmap_canvas"
-                                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                      frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                             </div>
                         </div>
 

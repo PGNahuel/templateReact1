@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import t from "./../resources/translate"
-import $ from 'jquery';
-import "magnific-popup";
 import { marked } from "marked";
 
 export async function fetchAndParseMarkdown(filePath) {
@@ -24,6 +22,7 @@ async function importAllMarkdown() {
     const articles = await Promise.all(filenames.map(async f => {
         const html = await fetchAndParseMarkdown(`./articules/${f.file}`);
         return {
+            id: f.id,
             title: f.title,
             author: f.author,
             content: html,
@@ -37,30 +36,16 @@ async function importAllMarkdown() {
 const Article = (props) => {
     let author = props.Author ? props.Author : t("UNKNOW");
 
-    const contenido = `<div class="popUpMagnific">
-    ${props.Content}
-</div>`;
-
-    const blob = new Blob([contenido], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
     const img = props.Img ? props.Img : "articule.webp";
 
-    useEffect(() => {
-        $('.simple-ajax-popup-align-top').magnificPopup({
-            type: 'ajax',
-            alignTop: true,
-            overflowY: 'scroll'
-        });
-    }, []);
-
     return (
-        <div className="news-card">
-            <a className="simple-ajax-popup-align-top" href={url}>
+        <div className="news-card" onClick={props.onClick}>
+            <a className="simple-ajax-popup-align-top" >
                 <img src={"img/"+img} className="news-image" />
             </a>
             <div className="news-content">
                 <div className="news-title">
-                    <a className="simple-ajax-popup-align-top" href={url}>{props.Title}</a>
+                    <span className="simple-ajax-popup-align-top">{props.Title}</span>
                 </div>
                 <div className="news-author">Por <span className="author-name">{author}</span></div>
             </div>
@@ -68,7 +53,7 @@ const Article = (props) => {
     );
 };
 
-const PanelArticles = () => {
+const PanelArticles = ({Load}) => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
@@ -77,7 +62,8 @@ const PanelArticles = () => {
                 Title: info.title,
                 Content: info.content,
                 Author: info.author,
-                Img: info.img
+                Img: info.img,
+                Id: info.id
             }));
             setArticles(mapped);
         }).catch(err => {
@@ -94,8 +80,8 @@ const PanelArticles = () => {
             <hr className="mb-5"></hr>
 
             <div className="news-container">
-                {articles.map((a, index) => (
-                    <Article key={index} Title={a.Title} Content={a.Content} Author={a.Author} Img={a.Img} />
+                {articles.map((a) => (
+                    <Article key={a.Id} Title={a.Title} Content={a.Content} Author={a.Author} Img={a.Img} onClick={()=>{Load(a)}} />
                 ))}
             </div>
             </div>
