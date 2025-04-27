@@ -35,7 +35,7 @@ export default function MainContent() {
                         {
                             articles.map((articule, index) => {
                                 return <ResumeMainItem 
-                                Key={index} 
+                                key={index} 
                                 Date={articule.date} 
                                 Icon={articule.icon} 
                                 Resume={articule.resume}

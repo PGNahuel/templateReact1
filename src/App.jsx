@@ -1,10 +1,10 @@
 import './App.css';
+import React, { useState } from "react";
 import Navigator from './navbar/navbar';
 import PanelArticles from './listproject/ListProjects';
 import DetailContnet from "./detailcontent/DetailContent";
 import PanelContact from './contact/panelContact';
 import MainContent from './maincontent/maincontent';
-import { useState } from "react";
 
 function App() {
     const [articuloSeleccionado, setArticuloSeleccionado] = useState(null);
