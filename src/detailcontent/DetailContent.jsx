@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react"
 
 export default function DetailContent({Articulo, Volver}) {
     return (
@@ -7,7 +7,7 @@ export default function DetailContent({Articulo, Volver}) {
             <div className="tm-section">
                 <h2 className="tm-text-primary" id="articles">{Articulo.Title}</h2>
                 <hr className="mb-5"></hr>
-                <div class="detail-content" dangerouslySetInnerHTML={{ __html: Articulo.Content }} />
+                <div className="detail-content" dangerouslySetInnerHTML={{ __html: Articulo.Content }} />
             </div>
             <span onClick={Volver} className="volverBtn">Volver</span>
         </div>
