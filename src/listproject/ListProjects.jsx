@@ -72,11 +72,10 @@ const PanelArticles = ({Load}) => {
     }, []);
 
     return (
-        
-        <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.webp"></div>
+        <div className="tm-section-wrap" id="articles">
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/brainstrom.webp" id="imgArticules"></div>
             <div className="tm-section">
-            <h2 className="tm-text-primary" id="articles">{t("ARTICLES")}</h2>
+            <h2 className="tm-text-primary">{t("ARTICLES")}</h2>
             <hr className="mb-5"></hr>
 
             <div className="news-container">

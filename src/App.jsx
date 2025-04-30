@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Navigator from './navbar/navbar';
 import PanelArticles from './listproject/ListProjects';
 import DetailContnet from "./detailcontent/DetailContent";
@@ -22,12 +22,12 @@ function App() {
     const volverALista = (elementoScroll) => {
         setArticuloSeleccionado(null);
 
-        setTimeout(() => {
-            const elemento = document.querySelector(elementoScroll);
-            if (elemento) {
-                elemento.scrollIntoView({ behavior: 'smooth' });
-            }
-        }, 100);
+        setTimeout(()=>{
+            $('.tm-parallax').each(function() {
+                var imageSrc = $(this).data('image-src');
+                $(this).parallax({ imageSrc: imageSrc });
+              });
+        },100);
     };
 
     return (

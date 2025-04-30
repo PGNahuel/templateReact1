@@ -1,6 +1,13 @@
-import React from "react"
+import React, {useEffect} from "react"
 
 export default function DetailContent({Articulo, Volver}) {
+    useEffect(()=>{
+        $('.tm-parallax').each(function() {
+            var imageSrc = $(this).data('image-src');
+            $(this).parallax({ imageSrc: imageSrc });
+          });
+    },[]);
+    
     return (
         <div className="tm-section-wrap">
             <div className="tm-parallax" data-parallax="scroll" data-image-src={"img/"+Articulo.Img}></div>

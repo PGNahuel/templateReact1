@@ -2,14 +2,14 @@ import React from "react";
 import FormContact from "./form";
 import t from "./../resources/translate"
 
-export default function PanelContact(props) {
+const PanelContact = (props) =>{
     const mapJoseMarmol = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13107.053242930078!2d-58.38071122631427!3d-34.786733393364905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd346291b7ef7%3A0x44b74d34162ac098!2sB1845%20Jos%C3%A9%20Marmol%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1745258660104!5m2!1ses-419!2sar";
 
     const title = props.title ? props.title : t("CONTACT");
 
     return (
         <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/contacto.webp"></div>
+            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/contacto.webp" id="imgContact"></div>
             <div id="contact" className="tm-section">
                 <h2 className="tm-text-primary">{title}</h2>
                 <hr className="mb-5" />
@@ -58,3 +58,5 @@ export default function PanelContact(props) {
         </div>
     )
 }
+
+export default PanelContact;
