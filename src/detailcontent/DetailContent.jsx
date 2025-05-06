@@ -1,17 +1,12 @@
 import React, {useEffect} from "react"
 
 export default function DetailContent({Articulo, Volver}) {
-    useEffect(()=>{
-        $('.tm-parallax').each(function() {
-            var imageSrc = $(this).data('image-src');
-            $(this).parallax({ imageSrc: imageSrc });
-          });
-    },[]);
-    
     return (
-        <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src={"img/"+Articulo.Img}></div>
-            <div className="tm-section">
+        <div className="maincontent">
+            <div className="banner">
+                <img class="contentbanner" src={"img/img-"+Articulo.Img}></img>
+                </div>
+            <div>
                 <h2 className="tm-text-primary" id="articles">{Articulo.Title}</h2>
                 <hr className="mb-5"></hr>
                 <div className="detail-content" dangerouslySetInnerHTML={{ __html: Articulo.Content }} />

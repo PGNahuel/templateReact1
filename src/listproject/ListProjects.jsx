@@ -80,7 +80,7 @@ const PanelArticles = ({Load}) => {
 
             <div className="news-container">
                 {articles.map((a) => (
-                    <Article key={a.Id} Title={a.Title} Content={a.Content} Author={a.Author} Img={a.Img} onClick={()=>{Load(a)}} />
+                    <Article key={a.Id} Title={a.Title} Content={a.Content} Author={a.Author} Img={"tm-"+a.Img} onClick={()=>{Load(a)}} />
                 ))}
             </div>
             </div>

@@ -851,3 +851,28 @@ select:not([multiple]) {
 		margin-left: 0;
 	}
 }
+
+
+.maincontent{
+	margin-left:20px;
+}
+
+.maincontent .banner{
+	width: 100%;
+	max-height: 250px;
+	overflow: hidden;
+	margin-bottom:30px;
+  }
+  
+  .banner img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	max-height: 250px;
+  }
+
+@media (min-width:990px){
+	.maincontent{
+		margin-left:290px;
+	}
+}
