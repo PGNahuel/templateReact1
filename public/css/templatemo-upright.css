@@ -855,6 +855,7 @@ select:not([multiple]) {
 
 .maincontent{
 	margin-left:20px;
+	background-color: white;
 }
 
 .maincontent .banner{
@@ -873,6 +874,6 @@ select:not([multiple]) {
 
 @media (min-width:990px){
 	.maincontent{
-		margin-left:290px;
+		margin-left:280px;
 	}
 }
