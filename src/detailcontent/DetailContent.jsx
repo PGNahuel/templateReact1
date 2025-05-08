@@ -1,10 +1,19 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useRef } from "react"
+
+import mermaid from 'mermaid';
 
 export default function DetailContent({Articulo, Volver}) {
+    useEffect(()=>{
+        mermaid.initialize({ startOnLoad: false });
+        mermaid.run({
+            nodes: [...document.getElementsByClassName("mermaid")],
+        });
+    },[]);
+
     return (
         <div className="maincontent">
             <div className="banner">
-                <img class="contentbanner" src={"img/img-"+Articulo.Img}></img>
+                <img className="contentbanner" src={"img/img-"+Articulo.Img}></img>
                 </div>
             <div>
                 <h2 className="tm-text-primary" id="articles">{Articulo.Title}</h2>
