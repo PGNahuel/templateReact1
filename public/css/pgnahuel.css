@@ -26,3 +26,16 @@
 .mermaid{
     text-align: center;;
 }
+
+.social-links{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #006699;
+}
+
+.social-links a {
+    color: #888;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
