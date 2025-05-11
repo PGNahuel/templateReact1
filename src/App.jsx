@@ -3,17 +3,16 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useParams, useNavigate, Navigate } from "react-router-dom";
 import Navigator from './navbar/navbar';
 import PanelArticles from './listproject/ListProjects';
-import DetailContnet from "./detailcontent/DetailContent";
+import DetailContent from "./detailcontent/DetailContent";
 import PanelContact from './contact/panelContact';
 import MainContent from './maincontent/maincontent';
+import tableContent from './tablecontent.json'
 
-// Componente para la página principal
 function HomePage({ onSelectArticle }) {
   useEffect(() => {
-    // Inicializar parallax al cargar la página principal
     setTimeout(() => {
-      if (window.$) { // Verificar si jQuery está disponible
-        window.$('.tm-parallax').each(function() {
+      if (window.$) {
+        window.$('.tm-parallax').each(function () {
           const imageSrc = window.$(this).data('image-src');
           window.$(this).parallax({ imageSrc: imageSrc });
         });
@@ -32,45 +31,23 @@ function HomePage({ onSelectArticle }) {
         X="NachoPNG"
         Youtube="NahuelGomez94"
         Linkedin="nahuel-g%C3%B3mez-a869617b"
-        Podcast="escuchar-audios-nahuel-gomez_al_15792872_1.html" 
+        Podcast="escuchar-audios-nahuel-gomez_al_15792872_1.html"
       />
     </>
   );
 }
 
-// Componente para ver el detalle de un artículo
-function ArticleDetailPage({ articulos }) {
-  const { id } = useParams();
+function ArticleDetailPage() {
   const navigate = useNavigate();
-  const [articulo, setArticulo] = useState(null);
 
-  useEffect(() => {
-    // Aquí deberías buscar el artículo basado en el ID de la URL
-    // Esto es un ejemplo, deberás adaptarlo a cómo tengas estructurados tus datos
-    const articuloEncontrado = articulos.find(art => art.id === id);
-    console.log("articuloEncontrado: ", articuloEncontrado, id);
-    console.log("id: ", id, id);
-    console.log("find: ", articulos.find(art => {return art.id === id}));
-    if (articuloEncontrado) {
-      setArticulo(articuloEncontrado);
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-        console.log("opapapapapa);");
-      // Si no se encuentra el artículo, redirigir a la página principal
-      navigate('/');
-    }
-  }, [id, articulos, navigate]);
+  const { id } = useParams();
 
   const volverALista = () => {
     navigate('/');
-    
-    // Reiniciar parallax después de volver a la lista
+
     setTimeout(() => {
-      if (window.$) { // Verificar si jQuery está disponible
-        window.$('.tm-parallax').each(function() {
+      if (window.$) {
+        window.$('.tm-parallax').each(function () {
           const imageSrc = window.$(this).data('image-src');
           window.$(this).parallax({ imageSrc: imageSrc });
         });
@@ -78,30 +55,16 @@ function ArticleDetailPage({ articulos }) {
     }, 100);
   };
 
-  if (!articulo) {
-    return <div>Cargando...</div>;
-  }
-
-  return <DetailContnet Articulo={articulo} Volver={volverALista} />;
+  return <DetailContent Id={id} Volver={volverALista} />;
 }
 
-// Componente principal que gestiona el enrutamiento
 function AppContent() {
   const [articulos, setArticulos] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Aquí deberías cargar tus artículos, ya sea desde una API o desde donde los tengas
-    // Este es un ejemplo, deberás adaptarlo a tu caso
     const cargarArticulos = async () => {
-      // Simulando carga de artículos
-      // Reemplaza esto con tu lógica real de carga de datos
-      const datosArticulos = [
-        {"id":1,"title":"Mi experiencia profesional", "file":"exp.md", "author":"Nahuel Gómez", "img":"codeando.webp"},
-        {"id":2,"title":"Codificación prolija y documentación", "file":"neat_coding.md", "author":"Nahuel Gómez", "img":"relatando.webp"},
-        {"id":3,"title":"Pensar en abstracciones: una forma más sana de programar", "file":"think_abstract.md", "author":"Nahuel Gómez", "img":"podcaster.webp"},
-        {"id":4,"title":"Mi libro: Código del alma", "file":"mybook.md", "author":"Nahuel Gómez", "img":"news.webp"}
-    ]
+      const datosArticulos = tableContent;
       setArticulos(datosArticulos);
     };
 
@@ -109,8 +72,7 @@ function AppContent() {
   }, []);
 
   const seleccionarArticulo = (articulo) => {
-    // Navegar a la ruta del artículo seleccionado
-    navigate(`/articulo/${articulo.id}`);
+    navigate(`/articulo/${articulo.Id}`);
   };
 
   const volverALista = () => {
