@@ -1,50 +1,21 @@
 import React from "react";
 import t from "./../resources/translate";
-import ResumeMainItem from "./resumeItemContent";
 
 export default function MainContent() {
-    let articles = [
-        {
-            title: "Crecé"
-            , date: "23 de abril del 2025"
-            , resume: "Acá voy a dar lo mejor de mí, documentarlo y subirlo de manera que puedas crecer profesionalmente. Si queres hablar conmigo, abajo tenes todos mis canales de contacto."
-            , icon: "fa-dove"
-        },
-        {
-            title: "Mi objetivo"
-            , date: "23 de abril del 2025"
-            , resume: "Con esta página busco centralizar el conocimiento que tengo y poder compartirlo con aquellos que les interese, además de tener un lugar donde mostrar lo que hago y cómo lo hago."
-            , icon: "fa-scroll"
-        },
-        {
-            title: "Como va pintando la cosa"
-            , date: "23 de abril del 2025"
-            , resume: "La verdad que como backender pareciera que no avanzo, por la verdad es que sí. Hay muchas cosas por hacer, muchas que diseñar, muchas que mostrar. Es un clima soleado, ventoso y en un terreno nuevo."
-            , icon: "fa-cloud-sun"
-        }
-    ];
-
     return (
-        <div className="tm-section-wrap">
-            <div className="tm-parallax" data-parallax="scroll" data-image-src="img/inews.webp"></div>
-            <div id="home" className="tm-section">
-                <h2 className="tm-text-primary">{t("MAIN_CONTENT")}</h2>
-                <hr className="mb-5"></hr>
-                <div className="row tm-row-home">
-                    <div className="tm-col-home tm-col-home-l">
-                        {
-                            articles.map((articule, index) => {
-                                return <ResumeMainItem 
-                                key={index} 
-                                Date={articule.date} 
-                                Icon={articule.icon} 
-                                Resume={articule.resume}
-                                Title={articule.title}/>
-                            })
-                        }
-                    </div>
-                </div>
+        <div class="tm-section-wrap">
+                        <div className="tm-parallax" data-parallax="scroll" data-image-src="img/inews.webp"></div>
+
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="/img/yo.webp" alt="Foto de perfil de Nahuel"></img>
             </div>
+            <div class="profile-text">
+                <p><strong>Hola, soy Nahuel. Trabajo como desarrollador backend y con los años me fui especializando en automatizar tareas y sacarle el jugo a cada proceso.</strong> Me gusta ir directo al grano, entender qué hace falta y resolverlo de la forma más clara y eficiente posible. En este espacio comparto ideas, aprendizajes y algunas soluciones que me sirvieron en la vida real, sin vueltas ni teorías de más.</p>
+                
+                <p>Si estás arrancando en el mundo del desarrollo o simplemente querés mejorar lo que ya venís haciendo, capaz te interese lo que vas a encontrar por acá. <strong>Hay artículos cortos, ejemplos prácticos y uno que otro experimento.</strong> La idea es que te lleves algo útil cada vez que pases.</p>
+            </div>
+        </div>
         </div>
     )
 }
