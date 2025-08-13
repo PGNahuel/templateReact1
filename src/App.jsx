@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useParams, useNavigate, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import Navigator from './navbar/navbar';
 import PanelArticles from './listproject/ListProjects';
 import DetailContent from "./detailcontent/DetailContent";
@@ -40,7 +40,8 @@ function HomePage({ onSelectArticle }) {
 function ArticleDetailPage() {
   const navigate = useNavigate();
 
-  const { id } = useParams();
+  const searchParams = new URLSearchParams(window.location.search);
+  const id = searchParams.get('id');
 
   const volverALista = () => {
     navigate('/');
@@ -72,12 +73,15 @@ function AppContent() {
   }, []);
 
   const seleccionarArticulo = (articulo) => {
-    navigate(`/articulo/${articulo.Id}`);
+    navigate(`/?id=${articulo.Id}`);
   };
 
   const volverALista = () => {
     navigate('/');
   };
+
+  const searchParams = new URLSearchParams(window.location.search);
+  const id = searchParams.get('id');
 
   return (
     <div className="container-fluid">
@@ -85,8 +89,7 @@ function AppContent() {
         <Navigator Unload={volverALista} />
         <div className="tm-main">
           <Routes>
-            <Route path="/" element={<HomePage onSelectArticle={seleccionarArticulo} />} />
-            <Route path="/articulo/:id" element={<ArticleDetailPage articulos={articulos} />} />
+            <Route path="/" element={id ? <ArticleDetailPage articulos={articulos} /> : <HomePage onSelectArticle={seleccionarArticulo} />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
