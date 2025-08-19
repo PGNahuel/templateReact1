@@ -24,6 +24,9 @@ export default function DetailContent({ Id, Articulo, Volver }) {
                         Author: articulo.author
                     }
 
+                    window.document.title = "Nahuel Gómez | " + articuloFormatted.Title;
+                    window.history.replaceState(null, articuloFormatted.Title, "/?id=" + articuloFormatted.Id);
+
                     setContenido({
                         ...articuloFormatted,
                         Cargando: false
@@ -36,6 +39,7 @@ export default function DetailContent({ Id, Articulo, Volver }) {
                     }, 100);
                 })
                 .catch((c) => {
+                    console.log(c);
                     setContenido({
                         Cargando: false,
                         Error: true,
@@ -81,7 +85,20 @@ export default function DetailContent({ Id, Articulo, Volver }) {
                         dangerouslySetInnerHTML={{ __html: contenido.Content }} 
                     />
                 </div>
-                <span onClick={Volver} className="volverBtn">Volver</span>
+                <div className="footer">
+                    {(() => {
+                        const baseUrl = window.location.origin + window.location.pathname + '?id=' + encodeURIComponent(contenido.Id || Id);
+                        const text = `Mirá lo que publico @NachoPNG! Estoy seguro te va a interesar... ${baseUrl}`;
+                        const tweetUrl =
+                            'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+                        return (
+                            <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className="share-button">
+                                Compartir en X
+                            </a>
+                        );
+                    })()}
+                </div>
+                <span onClick={Volver} className="volverBtn btn">Volver</span>
             </div>
         );
     }

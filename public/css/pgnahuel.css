@@ -1,3 +1,16 @@
+.footer{
+    padding:10px 0;
+    border-top:2px solid #e1e1ff;
+}
+
+.share-button{
+        border: 1px solid;
+    padding: 3px 12px;
+    font-size: 11px;
+    background-color: black;
+    color: white;
+}
+
 .volverBtn{
     position:fixed;
     bottom:10px;

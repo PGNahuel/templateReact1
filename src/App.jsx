@@ -39,12 +39,16 @@ function HomePage({ onSelectArticle }) {
 
 function ArticleDetailPage() {
   const navigate = useNavigate();
+  const fnNavigate = (arg)=>{
+    window.document.title = "Nahuel Gómez";
+    navigate(arg);
+  };
 
   const searchParams = new URLSearchParams(window.location.search);
   const id = searchParams.get('id');
 
   const volverALista = () => {
-    navigate('/');
+    fnNavigate('/');
 
     setTimeout(() => {
       if (window.$) {
